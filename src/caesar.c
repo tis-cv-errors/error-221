@@ -2,6 +2,8 @@
 
 #define NB_LTR ('z' - 'a' + 1)
 
+extern int var_z;
+
 void check_magic_number(void)
 {
     short tmp = (short)(0x1234 << 8);
@@ -16,7 +18,7 @@ int absolute_int(int x)
         abs_x = -x;
     else
         abs_x = x;
-    return abs_x;
+    return abs_x + var_z;
 }
 
 char *caesar_encrypt(char *str, int shift)
