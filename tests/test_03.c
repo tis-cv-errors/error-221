@@ -14,9 +14,9 @@ int main(void)
 
     printf("Test 1: Shift with a negative input\n");
     if (a>0)
-        gen_test(str, -a);
+        gen_test(str, -a+1);
     else 
-        gen_test(str, a);
+        gen_test(str, a-1);
 
     return 0;
 }
