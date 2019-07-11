@@ -3,7 +3,7 @@
 #include <caesar.h>
 #include <gen_test.h>
 
-int volatile a = -3;
+int volatile a;
 
 int main(void)
 {
