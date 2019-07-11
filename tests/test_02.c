@@ -3,7 +3,7 @@
 #include <caesar.h>
 #include <gen_test.h>
 
-int volatile a = 3;
+int volatile a = -3;
 
 int main(void)
 {
@@ -14,7 +14,7 @@ int main(void)
     printf("Test 1: Shift with a negative input\n");
     gen_test(str, a);
     printf("\nTest 2: Shift with a positive input\n");
-    gen_test(str, 7);
+    gen_test(str, -a);
 
     return 0;
 }
