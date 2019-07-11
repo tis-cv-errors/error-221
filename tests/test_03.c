@@ -4,6 +4,8 @@
 #include <caesar.h>
 #include <gen_test.h>
 
+static int volatile a;
+
 int main(void)
 {
     check_magic_number();
@@ -11,9 +13,10 @@ int main(void)
     char str[] = "People of Earth";
 
     printf("Test 1: Shift with a negative input\n");
-    gen_test(str, INT_MIN);
-    printf("\nTest 2: Shift with a positive input\n");
-    gen_test(str, INT_MAX);
+    if (a>0)
+        gen_test(str, -a);
+    else 
+        gen_test(str, a);
 
     return 0;
 }
